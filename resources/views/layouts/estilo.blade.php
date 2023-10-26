@@ -20,6 +20,11 @@
   <link rel="stylesheet" href="{{asset('admin/assets/css/vertical-layout-light/style.css')}}">
   <!-- endinject -->
   <link rel="shortcut icon" href="{{asset('admin/assets/images/favicon.png')}}" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.68/pdfmake.min.js"></script><!--para generarel pdflas cdns -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.68/vfs_fonts.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script><!-- jsPDF no me funco
+    errores a la hora de llamar el cdns al parecer-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.3/xlsx.full.min.js"></script>
 </head>
 <body>
 

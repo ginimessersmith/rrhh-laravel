@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Postulante;
 use App\Models\Cargo;
 use Spatie\Activitylog\Models\Activity;
+use PDF;
 
 
 class PostulanteController extends Controller
@@ -93,20 +94,10 @@ class PostulanteController extends Controller
         }
         return redirect()->route('postulantes.index',compact('cargo'));
     }
-    
-
-    /*public function pdf(Personal $personals)
+    public function downloadPDF(Postulante $postulante)
     {
+        $pdf = PDF::loadView('postulantes.pdf', compact('postulante')); // view de como sera imprimido el pdf
+        return $pdf->download('Postulante-'.$postulante->id.'.pdf');
+    }
 
-        $empleado = Empleado::all();
-
-        date_default_timezone_set("America/La_Paz");
-        activity()->useLog('Empleado')->log('Generó reporte')->subject();
-        $lastActivity=Activity::all()->last();
-        $lastActivity->subject_id= $empleado->id;
-        $lastActivity->save();
-
-        $pdf =PDF::loadView('Empleado.pdf', compact('empleado','empleados'));
-        return $pdf->download('Empleado-'.$empleados->id.'.pdf');
-    }*/
 }

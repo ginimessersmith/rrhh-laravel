@@ -8,7 +8,7 @@
           {
             data: [200, 480, 700, 600, 620, 350, 380, 350, 850, "600", "650", "350", "590", "350", "620", "500", "990", "780", "650"],
             borderColor: [
-              '#4747A1'
+              '#000'
             ],
             borderWidth: 2,
             fill: false,
@@ -17,7 +17,7 @@
           {
             data: [400, 450, 410, 500, 480, 600, 450, 550, 460, "560", "450", "700", "450", "640", "550", "650", "400", "850", "800"],
             borderColor: [
-              '#F09397'
+              '#4747A1'
             ],
             borderWidth: 2,
             fill: false,
@@ -182,16 +182,16 @@
       var SalesChart = new Chart(SalesChartCanvas, {
         type: 'bar',
         data: {
-          labels: ["Jan", "Feb", "Mar", "Apr", "May"],
+          labels: ["Enero", "Febrero", "Marzo", "Abril", "Mayo"],
           datasets: [{
-              label: 'Offline Sales',
-              data: [480, 230, 470, 210, 330],
-              backgroundColor: '#98BDFF'
+              label: 'Postulantes Registrados',
+              data: [90, 70, 50, 30, 10],
+              backgroundColor: '#13381B'
             },
             {
-              label: 'Online Sales',
-              data: [400, 340, 550, 480, 170],
-              backgroundColor: '#4B49AC'
+              label: 'Postulantes Nuevos',
+              data: [100, 80, 60, 40, 20],
+              backgroundColor: '#000'
             }
           ]
         },
@@ -218,9 +218,9 @@
               ticks: {
                 display: true,
                 min: 0,
-                max: 560,
+                max: 100,
                 callback: function(value, index, values) {
-                  return  value + '$' ;
+                  return  value + '%' ;
                 },
                 autoSkip: true,
                 maxTicksLimit: 10,
@@ -329,7 +329,7 @@
     }
     if ($("#north-america-chart").length) {
       var areaData = {
-        labels: ["Jan", "Feb", "Mar"],
+        labels: ["Enero", "Marzo", "Julio"],
         datasets: [{
             data: [100, 50, 50],
             backgroundColor: [
@@ -358,14 +358,14 @@
         legendCallback: function(chart) { 
           var text = [];
           text.push('<div class="report-chart">');
-            text.push('<div class="d-flex justify-content-between mx-4 mx-xl-5 mt-3"><div class="d-flex align-items-center"><div class="mr-3" style="width:20px; height:20px; border-radius: 50%; background-color: ' + chart.data.datasets[0].backgroundColor[0] + '"></div><p class="mb-0">Offline sales</p></div>');
-            text.push('<p class="mb-0">88333</p>');
+            text.push('<div class="d-flex justify-content-between mx-4 mx-xl-5 mt-3"><div class="d-flex align-items-center"><div class="mr-3" style="width:20px; height:20px; border-radius: 50%; background-color: ' + chart.data.datasets[0].backgroundColor[0] + '"></div><p class="mb-0">Activas</p></div>');
+            text.push('<p class="mb-0">12301</p>');
             text.push('</div>');
-            text.push('<div class="d-flex justify-content-between mx-4 mx-xl-5 mt-3"><div class="d-flex align-items-center"><div class="mr-3" style="width:20px; height:20px; border-radius: 50%; background-color: ' + chart.data.datasets[0].backgroundColor[1] + '"></div><p class="mb-0">Online sales</p></div>');
-            text.push('<p class="mb-0">66093</p>');
+            text.push('<div class="d-flex justify-content-between mx-4 mx-xl-5 mt-3"><div class="d-flex align-items-center"><div class="mr-3" style="width:20px; height:20px; border-radius: 50%; background-color: ' + chart.data.datasets[0].backgroundColor[1] + '"></div><p class="mb-0">No-Activas</p></div>');
+            text.push('<p class="mb-0">7623</p>');
             text.push('</div>');
-            text.push('<div class="d-flex justify-content-between mx-4 mx-xl-5 mt-3"><div class="d-flex align-items-center"><div class="mr-3" style="width:20px; height:20px; border-radius: 50%; background-color: ' + chart.data.datasets[0].backgroundColor[2] + '"></div><p class="mb-0">Returns</p></div>');
-            text.push('<p class="mb-0">39836</p>');
+            text.push('<div class="d-flex justify-content-between mx-4 mx-xl-5 mt-3"><div class="d-flex align-items-center"><div class="mr-3" style="width:20px; height:20px; border-radius: 50%; background-color: ' + chart.data.datasets[0].backgroundColor[2] + '"></div><p class="mb-0">Revision</p></div>');
+            text.push('<p class="mb-0">2130</p>');
             text.push('</div>');
           text.push('</div>');
           return text.join("");
@@ -402,7 +402,7 @@
     }
     if ($("#north-america-chart-dark").length) {
       var areaData = {
-        labels: ["Jan", "Feb", "Mar"],
+        labels: ["Febrero", "Mayo", "Agosto"],
         datasets: [{
             data: [100, 50, 50],
             backgroundColor: [
@@ -431,14 +431,14 @@
         legendCallback: function(chart) { 
           var text = [];
           text.push('<div class="report-chart">');
-            text.push('<div class="d-flex justify-content-between mx-4 mx-xl-5 mt-3"><div class="d-flex align-items-center"><div class="mr-3" style="width:20px; height:20px; border-radius: 50%; background-color: ' + chart.data.datasets[0].backgroundColor[0] + '"></div><p class="mb-0">Offline sales</p></div>');
-            text.push('<p class="mb-0">88333</p>');
+            text.push('<div class="d-flex justify-content-between mx-4 mx-xl-5 mt-3"><div class="d-flex align-items-center"><div class="mr-3" style="width:20px; height:20px; border-radius: 50%; background-color: ' + chart.data.datasets[0].backgroundColor[0] + '"></div><p class="mb-0">Activas</p></div>');
+            text.push('<p class="mb-0">12301</p>');
             text.push('</div>');
-            text.push('<div class="d-flex justify-content-between mx-4 mx-xl-5 mt-3"><div class="d-flex align-items-center"><div class="mr-3" style="width:20px; height:20px; border-radius: 50%; background-color: ' + chart.data.datasets[0].backgroundColor[1] + '"></div><p class="mb-0">Online sales</p></div>');
-            text.push('<p class="mb-0">66093</p>');
+            text.push('<div class="d-flex justify-content-between mx-4 mx-xl-5 mt-3"><div class="d-flex align-items-center"><div class="mr-3" style="width:20px; height:20px; border-radius: 50%; background-color: ' + chart.data.datasets[0].backgroundColor[1] + '"></div><p class="mb-0">No-Activas</p></div>');
+            text.push('<p class="mb-0">7623</p>');
             text.push('</div>');
-            text.push('<div class="d-flex justify-content-between mx-4 mx-xl-5 mt-3"><div class="d-flex align-items-center"><div class="mr-3" style="width:20px; height:20px; border-radius: 50%; background-color: ' + chart.data.datasets[0].backgroundColor[2] + '"></div><p class="mb-0">Returns</p></div>');
-            text.push('<p class="mb-0">39836</p>');
+            text.push('<div class="d-flex justify-content-between mx-4 mx-xl-5 mt-3"><div class="d-flex align-items-center"><div class="mr-3" style="width:20px; height:20px; border-radius: 50%; background-color: ' + chart.data.datasets[0].backgroundColor[2] + '"></div><p class="mb-0">Revision</p></div>');
+            text.push('<p class="mb-0">2130</p>');
             text.push('</div>');
           text.push('</div>');
           return text.join("");
@@ -476,7 +476,7 @@
 
     if ($("#south-america-chart").length) {
       var areaData = {
-        labels: ["Jan", "Feb", "Mar"],
+        labels: ["Febrero", "Mayo", "Agosto"],
         datasets: [{
             data: [60, 70, 70],
             backgroundColor: [
@@ -505,14 +505,14 @@
         legendCallback: function(chart) { 
           var text = [];
           text.push('<div class="report-chart">');
-            text.push('<div class="d-flex justify-content-between mx-4 mx-xl-5 mt-3"><div class="d-flex align-items-center"><div class="mr-3" style="width:20px; height:20px; border-radius: 50%; background-color: ' + chart.data.datasets[0].backgroundColor[0] + '"></div><p class="mb-0">Offline sales</p></div>');
-            text.push('<p class="mb-0">495343</p>');
+            text.push('<div class="d-flex justify-content-between mx-4 mx-xl-5 mt-3"><div class="d-flex align-items-center"><div class="mr-3" style="width:20px; height:20px; border-radius: 50%; background-color: ' + chart.data.datasets[0].backgroundColor[0] + '"></div><p class="mb-0">Activas</p></div>');
+            text.push('<p class="mb-0">12301</p>');
             text.push('</div>');
-            text.push('<div class="d-flex justify-content-between mx-4 mx-xl-5 mt-3"><div class="d-flex align-items-center"><div class="mr-3" style="width:20px; height:20px; border-radius: 50%; background-color: ' + chart.data.datasets[0].backgroundColor[1] + '"></div><p class="mb-0">Online sales</p></div>');
-            text.push('<p class="mb-0">630983</p>');
+            text.push('<div class="d-flex justify-content-between mx-4 mx-xl-5 mt-3"><div class="d-flex align-items-center"><div class="mr-3" style="width:20px; height:20px; border-radius: 50%; background-color: ' + chart.data.datasets[0].backgroundColor[1] + '"></div><p class="mb-0">No-Activas</p></div>');
+            text.push('<p class="mb-0">7623</p>');
             text.push('</div>');
-            text.push('<div class="d-flex justify-content-between mx-4 mx-xl-5 mt-3"><div class="d-flex align-items-center"><div class="mr-3" style="width:20px; height:20px; border-radius: 50%; background-color: ' + chart.data.datasets[0].backgroundColor[2] + '"></div><p class="mb-0">Returns</p></div>');
-            text.push('<p class="mb-0">290831</p>');
+            text.push('<div class="d-flex justify-content-between mx-4 mx-xl-5 mt-3"><div class="d-flex align-items-center"><div class="mr-3" style="width:20px; height:20px; border-radius: 50%; background-color: ' + chart.data.datasets[0].backgroundColor[2] + '"></div><p class="mb-0">Revision</p></div>');
+            text.push('<p class="mb-0">2130</p>');
             text.push('</div>');
           text.push('</div>');
           return text.join("");

@@ -19,6 +19,7 @@
         "vite": "^4.0.0"
     },
     "dependencies": {
-        "bootstrap-icons": "^1.11.0"
+        "bootstrap-icons": "^1.11.0",
+        "jspdf": "^2.5.1"
     }
 }

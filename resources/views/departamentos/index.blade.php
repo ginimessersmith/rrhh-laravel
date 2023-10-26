@@ -1,52 +1,42 @@
 @extends('layouts.estilo')
 
 @section('tabla')
-<div class="container-xl">
+<div class="content-wrapper">
 
-    <section class="section">
-        <div class="section-header">
-            <h3 class="page__heading">DEPARTAMENTOS</h3>
-        </div>
-        <div class="section-body">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="d-flex justify-content-between align-items-center mb-3">
-                                <a class="btn btn-dark" href="{{ route('departamentos.create') }}">Nuevo</a>
-                            </div>
-
-                            <div class="table-responsive">
-                                <table class="table table-striped">
-                                    <thead style="background-color:#6777ef">
-                                        <tr>
-                                            <th style="display: none; color:#fff;">ID</th>
-                                            <th>Nombre</th>
-                                            <th>Acciones</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                    @foreach ($departamentos as $departamento)
-                                      <tr>
-                                          <td style="display: none;">{{ $departamento->id }}</td>
-                                          <td>{{ $departamento->name }}</td>
-                                          
-                                          <td>
-                                              <a class="btn btn-primary" href="{{ route('departamentos.edit',$departamento->id) }}">Editar</a>
-                                              {!! Form::open(['method' => 'delete','route' => ['departamentos.destroy', $departamento->id],'style'=>'display:inline']) !!}
-                                              {!! Form::submit('Borrar', ['class' => 'btn btn-danger']) !!}
-                                              {!! Form::close() !!}
-                                          </td>
-                                      </tr>
-                                  @endforeach
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
+<div class="card mb-3">
+    <div class="card-body d-flex justify-content-between">
+        <h4 class="card-title">DEPARTAMENTOS</h4>
+        <a class="btn btn-dark" href="{{ route('departamentos.create') }}">Nuevo</a>
+    </div>
+</div>
+    <div class="row">
+        @foreach ($departamentos as $departamento)
+        <div class="col-lg-4 mb-3">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Departamento:</h4>
+                    <table class="table">
+                        <tbody>
+                            <tr>
+                                <th>ID:</th>
+                                <td>{{ $departamento->id }}</td>
+                            </tr>
+                            <tr>
+                                <th>Nombre:</th>
+                                <td>{{ $departamento->name }}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="text-center">
+                        <a class="btn btn-primary" href="{{ route('departamentos.edit', $departamento->id) }}">Editar</a>
+                        {!! Form::open(['method' => 'delete', 'route' => ['departamentos.destroy', $departamento->id], 'style' => 'display:inline']) !!}
+                        {!! Form::submit('Borrar', ['class' => 'btn btn-danger']) !!}
+                        {!! Form::close() !!}
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+        @endforeach
+    </div>
 </div>
 @endsection
